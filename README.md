@@ -1,9 +1,5 @@
 # Alpine SQS _(alpine-sqs)_
 
-![banner](https://raw.githubusercontent.com/roribio/alpine-sqs/master/banner.png)
-
-[![](https://images.microbadger.com/badges/image/roribio16/alpine-sqs.svg)](https://microbadger.com/images/roribio16/alpine-sqs "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/roribio16/alpine-sqs.svg)](https://microbadger.com/images/roribio16/alpine-sqs "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/stars/roribio16/alpine-sqs.svg)](https://hub.docker.com/r/roribio16/alpine-sqs/) [![Docker Pulls](https://img.shields.io/docker/pulls/roribio16/alpine-sqs.svg)](https://hub.docker.com/r/roribio16/alpine-sqs/) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
 > Dockerized ElasticMQ server + web UI over Alpine Linux for local development.
 
 Alpine SQS provides a containerized Java implementation of the Amazon Simple Queue Service (AWS-SQS). It is based on ElasticMQ running Alpine Linux and the Oracle Java 8 Server-JRE. It is compatible with AWS's API, CLI as well as the Amazon Java SDK. This allows for quicker local development without having to incurr in infrastructure costs.
@@ -15,8 +11,6 @@ The goal of this repository is to maintain an updated Docker environment for Ela
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
-- [Maintainer](#maintainer)
-- [Contribute](#contribute)
 - [License](#license)
 
 ## Background
