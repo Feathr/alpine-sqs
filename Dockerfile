@@ -12,7 +12,6 @@ WORKDIR /tmp/sqs-alpine
 RUN \
   apk add --update git \
   && rm -rf /var/cache/apk/* \
-  && git clone --verbose --depth=1 https://github.com/kobim/sqs-insight.git \
   && curl -L -o /usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-${jq_version}/jq-linux64 \
   && chmod +x /usr/local/bin/jq \
   && export elasticmq_version=$(curl -sL https://api.github.com/repos/adamw/elasticmq/releases/latest | jq -r .tag_name) \
@@ -25,7 +24,7 @@ LABEL maintainer="Ronald E. Oribio R. https://github.com/roribio"
 
 COPY --from=Builder /tmp/sqs-alpine/ /opt/
 COPY etc/ /etc/
-COPY opt/ /opt/
+COPY opt/ /opt/config
 
 RUN \
   apk add --update \
@@ -38,7 +37,6 @@ RUN \
     /var/cache/apk/* \
     /etc/supervisord.conf \
   && ln -s /etc/supervisor/supervisord.conf /etc/supervisord.conf \
-  && cd /opt/sqs-insight \
   && npm install
 
 EXPOSE 9324 9325 
